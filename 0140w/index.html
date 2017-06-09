@@ -1,0 +1,74 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+ECHO is off.
+<br> 
+<div id="DivCurTime"></div> 
+<br> 
+<button onclick="getCurTime()" type="button">Get current time position</button>  
+<button onclick="setCurTime(0)" type="button">00</button><br>   
+<button onclick="moveMS(-0.05)" type="button">Time-50ms</button>  
+<button onclick="moveMS(-0.01)" type="button">-10ms</button>  
+<button onclick="moveMS(0.01)" type="button">+10ms</button>  
+<button onclick="moveMS(0.05)" type="button">+50ms</button>  
+<button onclick="setCurTime(5)" type="button">Set time position to 5 seconds</button><br>   
+<button onclick="play('title_02.mp4')">1:title_02.mp4</button> 
+<button onclick="play('title_03.mp4')">2:title_03.mp4</button> 
+<button onclick="play('title_04.mp4')">3:title_04.mp4</button> 
+<button onclick="play('title_23.mp4')">4:title_23.mp4</button> 
+<button onclick="play('title_24.mp4')">5:title_24.mp4</button> 
+<button onclick="play('title_25.mp4')">6:title_25.mp4</button> 
+<button onclick="play('title_26.mp4')">7:title_26.mp4</button> 
+<button onclick="play('title_27.mp4')">8:title_27.mp4</button> 
+<button onclick="play('title_29.mp4')">9:title_29.mp4</button> 
+<button onclick="play('T_06_chapter_01.mp4')">10:T_06_chapter_01.mp4</button> 
+<br> 
+<button onclick="play('T_06_chapter_02.mp4')">11:T_06_chapter_02.mp4</button> 
+<button onclick="play('T_06_chapter_03.mp4')">12:T_06_chapter_03.mp4</button> 
+<button onclick="play('T_06_chapter_04.mp4')">13:T_06_chapter_04.mp4</button> 
+<button onclick="play('T_06_chapter_05.mp4')">14:T_06_chapter_05.mp4</button> 
+<button onclick="play('T_06_chapter_06.mp4')">15:T_06_chapter_06.mp4</button> 
+<button onclick="play('T_06_chapter_07.mp4')">16:T_06_chapter_07.mp4</button> 
+<button onclick="play('T_06_chapter_08.mp4')">17:T_06_chapter_08.mp4</button> 
+<button onclick="play('T_06_chapter_09.mp4')">18:T_06_chapter_09.mp4</button> 
+<button onclick="play('T_06_chapter_10.mp4')">19:T_06_chapter_10.mp4</button> 
+<button onclick="play('T_06_chapter_11.mp4')">20:T_06_chapter_11.mp4</button> 
+<br> 
+<button onclick="play('T_06_chapter_12.mp4')">21:T_06_chapter_12.mp4</button> 
+<button onclick="play('T_06_chapter_13.mp4')">22:T_06_chapter_13.mp4</button> 
+<button onclick="play('T_06_chapter_14.mp4')">23:T_06_chapter_14.mp4</button> 
+<button onclick="play('T_06_chapter_15.mp4')">24:T_06_chapter_15.mp4</button> 
+<button onclick="play('T_06_chapter_16.mp4')">25:T_06_chapter_16.mp4</button> 
+<button onclick="play('T_06_chapter_17.mp4')">26:T_06_chapter_17.mp4</button> 
+<button onclick="play('T_06_chapter_18.mp4')">27:T_06_chapter_18.mp4</button> 
+<button onclick="play('T_06_chapter_19.mp4')">28:T_06_chapter_19.mp4</button> 
+<button onclick="play('T_06_chapter_20.mp4')">29:T_06_chapter_20.mp4</button> 
+<button onclick="play('T_06_chapter_21.mp4')">30:T_06_chapter_21.mp4</button> 
+<br> 
+<button onclick="play('T_06_chapter_22.mp4')">31:T_06_chapter_22.mp4</button> 
+<button onclick="play('T_06_chapter_23.mp4')">32:T_06_chapter_23.mp4</button> 
+<br> 
+<video id="myVideo" width="720" height="480" controls> 
+ <source src="0.mp4" type="video/mp4">  
+Your browser does not support HTML5 video. 
+</video>  
+<script>  
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+</script> 
+</body> 
